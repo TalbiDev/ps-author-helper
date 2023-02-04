@@ -4,10 +4,16 @@
   "description": "Pluralsight author helper",
   "main": "dist/index.js",
   "types": "dist/index.d.js",
+  "repository": {
+    "url":"git+https://github.com/TalbiDev/ps-author-helper.git",
+    "type": "git"
+  },
   "scripts": {
     "build": "tsc",
     "format":"prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "version": "git run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "keywords": [
     "Pluralsight",
